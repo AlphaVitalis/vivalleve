@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="pt-BR">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>VivaLeve — Treinos</title>
+<style>:root{--bg:#071224;--card:#0b1220;--accent:#00e5a8;--accent2:#06b6d4;--muted:#94a3b8;--glass: rgba(255,255,255,0.03)}
+*{box-sizing:border-box}body{margin:0;font-family:Inter, system-ui, -apple-system, 'Segoe UI', Roboto, Arial;background:linear-gradient(180deg,#05060a,#071224);color:#e6eef6;line-height:1.45}
+.container{max-width:1200px;margin:0 auto;padding:28px}
+.header{display:flex;align-items:center;justify-content:space-between;gap:16px}
+.brand{display:flex;align-items:center;gap:12px}
+.logo{width:56px;height:56px;border-radius:12px;background:linear-gradient(135deg,var(--accent),var(--accent2));display:flex;align-items:center;justify-content:center;color:#03121a;font-weight:900}
+nav a{color:var(--muted);margin-left:16px;text-decoration:none;font-weight:700}
+nav a.cta{background:linear-gradient(90deg,var(--accent),var(--accent2));color:#001219;padding:10px 14px;border-radius:10px;text-decoration:none}
+.card{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));padding:18px;border-radius:12px;margin-top:20px;border:1px solid rgba(255,255,255,0.02)}
+.hero{display:flex;gap:24px;align-items:center;margin-top:18px}
+.hero .content{flex:1}
+.hero .media{width:480px;border-radius:14px;overflow:hidden;flex-shrink:0;border:1px solid rgba(255,255,255,0.03)}
+.section-title{font-size:20px;font-weight:800;margin-bottom:8px;color:#fff}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:12px}
+@media(max-width:980px){.hero{flex-direction:column}.grid3{grid-template-columns:1fr} .hero .media{width:100%}}
+.footer{display:flex;justify-content:space-between;align-items:center;margin-top:28px;color:var(--muted);padding-top:18px;border-top:1px solid rgba(255,255,255,0.02)}
+.small{font-size:13px;color:var(--muted)}
+.btn{display:inline-block;padding:10px 14px;background:linear-gradient(90deg,var(--accent),var(--accent2));color:#001219;border-radius:10px;text-decoration:none;font-weight:800}
+/* microinteractions */
+a:hover{opacity:0.95;transform:translateY(-2px);transition:all .18s ease}
+button, .btn{transition:transform .12s ease, box-shadow .12s ease}
+button:hover, .btn:hover{transform:translateY(-3px);box-shadow:0 10px 30px rgba(0,229,168,0.08)}
+.reveal{opacity:0;transform:translateY(14px);transition:all .6s cubic-bezier(.2,.9,.3,1)}
+.reveal.show{opacity:1;transform:none}
+.header.sticky{position:fixed;left:0;right:0;top:10px;background:linear-gradient(90deg, rgba(2,6,23,0.4), rgba(2,6,23,0.35));backdrop-filter: blur(6px);margin:auto;max-width:1200px;padding:12px 28px;border-radius:12px;z-index:60}
+\nheader .logo{background:linear-gradient(135deg,#8b5cf6,#06b6d4)}\n.section-hero{background:linear-gradient(180deg, rgba(139,92,246,0.06), transparent);border-radius:12px;padding:18px}\n.plan-card{padding:16px;border-radius:12px;background:linear-gradient(90deg, rgba(255,255,255,0.02), transparent);border:1px solid rgba(255,255,255,0.03)}\n</style>
+</head>
+<body>
+  <div class="container">
+    <header class="header">
+      <div class="brand"><div class="logo">VL</div><div><div style="font-weight:900">VivaLeve</div><div class="small">Treinos — alcance o próximo nível</div></div></div>
+      <nav><a href="index.html">Home</a><a href="treinos.html">Treinos</a><a href="refeicoes.html">Refeições</a><a href="inscreva-se.html">Inscreva-se</a><a class="cta" href="inscreva-se.html">Comece agora</a></nav>
+    </header>
+
+    <section class="section-hero card reveal" style="margin-top:18px;display:flex;gap:18px;align-items:center">
+      <div style="flex:1">
+        <div class="section-title">Treinos em Casa — Níveis</div>
+        <p class="small">Programas com duração definida, instruções passo-a-passo e estimativa de calorias.</p>
+        <div style="margin-top:12px;display:flex;gap:10px">
+          <a class="btn" href="#beginner">Iniciante</a>
+          <a class="btn" style="background:linear-gradient(90deg,#a78bfa,#06b6d4);" href="#intermediate">Intermediário</a>
+          <a class="btn" style="background:linear-gradient(90deg,#ffd27a,#ff8a6b);" href="#advanced">Avançado</a>
+        </div>
+      </div>
+      <div class="media reveal" style="width:360px"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" preserveAspectRatio="xMidYMid slice"><rect width="100%" height="100%" fill="#f7fbff"/><g transform="translate(60,30)"><rect x="40" y="80" width="600" height="320" rx="20" fill="#fff"/><g transform="translate(120,120)"><rect x="0" y="0" width="360" height="180" rx="12" fill="#eef9ff"/><path d="M20 140 q80 -100 200 -60" stroke="#06b6d4" stroke-width="8" fill="none" stroke-linecap="round"/><circle cx="60" cy="80" r="32" fill="#ffd27a"/></g></g></svg></div>
+    </section>
+
+    <section id="beginner" class="card reveal">
+      <div class="section-title">Iniciante — 15 minutos</div>
+      <div class="plan-card">
+        <strong>Treino A</strong>
+        <div class="small">Circuito de aquecimento e movimentos básicos. Sem equipamentos.</div>
+        <div style="margin-top:8px"><strong>Duração:</strong> 15 min • <strong>Calorias:</strong> ~120</div>
+      </div>
+    </section>
+
+    <section id="intermediate" class="card reveal">
+      <div class="section-title">Intermediário — 30 minutos</div>
+      <div class="plan-card">
+        <strong>Treino B</strong>
+        <div class="small">HIIT combinado com força corporal. Requer halteres opcionais.</div>
+        <div style="margin-top:8px"><strong>Duração:</strong> 30 min • <strong>Calorias:</strong> ~300</div>
+      </div>
+    </section>
+
+    <section id="advanced" class="card reveal">
+      <div class="section-title">Avançado — 45 minutos</div>
+      <div class="plan-card">
+        <strong>Treino C</strong>
+        <div class="small">Treino intenso com progressões e metas semanais.</div>
+        <div style="margin-top:8px"><strong>Duração:</strong> 45 min • <strong>Calorias:</strong> ~480</div>
+      </div>
+    </section>
+
+    <section class="card reveal">
+      <div class="section-title">Quer um plano personalizado?</div>
+      <p class="small">Inscreva-se para receber um plano completo com metas e cronograma.</p>
+      <a class="btn" href="inscreva-se.html">Inscreva-se</a>
+    </section>
+
+    <footer class="footer reveal">
+      <div><strong>VivaLeve</strong><div class="small">Copyright © 2025 VivaLeve</div></div>
+      <div class="small">Voltar para <a href="index.html" style="color:var(--accent)">Home</a></div>
+    </footer>
+  </div>
+<script>(function(){
+  const obs = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      if(e.isIntersecting){ e.target.classList.add('show'); obs.unobserve(e.target); }
+    });
+  }, {threshold:0.12});
+  document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
+  const header = document.querySelector('.header');
+  window.addEventListener('scroll', function(){
+    if(window.scrollY > 60) header.classList.add('sticky'); else header.classList.remove('sticky');
+  });
+})();</script>
+</body>
+</html>

@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="pt-BR">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>VivaLeve — Home</title>
+<style>:root{--bg:#071224;--card:#0b1220;--accent:#00e5a8;--accent2:#06b6d4;--muted:#94a3b8;--glass: rgba(255,255,255,0.03)}
+*{box-sizing:border-box}body{margin:0;font-family:Inter, system-ui, -apple-system, 'Segoe UI', Roboto, Arial;background:linear-gradient(180deg,#05060a,#071224);color:#e6eef6;line-height:1.45}
+.container{max-width:1200px;margin:0 auto;padding:28px}
+.header{display:flex;align-items:center;justify-content:space-between;gap:16px}
+.brand{display:flex;align-items:center;gap:12px}
+.logo{width:56px;height:56px;border-radius:12px;background:linear-gradient(135deg,var(--accent),var(--accent2));display:flex;align-items:center;justify-content:center;color:#03121a;font-weight:900}
+nav a{color:var(--muted);margin-left:16px;text-decoration:none;font-weight:700}
+nav a.cta{background:linear-gradient(90deg,var(--accent),var(--accent2));color:#001219;padding:10px 14px;border-radius:10px;text-decoration:none}
+.card{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));padding:18px;border-radius:12px;margin-top:20px;border:1px solid rgba(255,255,255,0.02)}
+.hero{display:flex;gap:24px;align-items:center;margin-top:18px}
+.hero .content{flex:1}
+.hero .media{width:480px;border-radius:14px;overflow:hidden;flex-shrink:0;border:1px solid rgba(255,255,255,0.03)}
+.section-title{font-size:20px;font-weight:800;margin-bottom:8px;color:#fff}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:12px}
+@media(max-width:980px){.hero{flex-direction:column}.grid3{grid-template-columns:1fr} .hero .media{width:100%}}
+.footer{display:flex;justify-content:space-between;align-items:center;margin-top:28px;color:var(--muted);padding-top:18px;border-top:1px solid rgba(255,255,255,0.02)}
+.small{font-size:13px;color:var(--muted)}
+.btn{display:inline-block;padding:10px 14px;background:linear-gradient(90deg,var(--accent),var(--accent2));color:#001219;border-radius:10px;text-decoration:none;font-weight:800}
+/* microinteractions */
+a:hover{opacity:0.95;transform:translateY(-2px);transition:all .18s ease}
+button, .btn{transition:transform .12s ease, box-shadow .12s ease}
+button:hover, .btn:hover{transform:translateY(-3px);box-shadow:0 10px 30px rgba(0,229,168,0.08)}
+.reveal{opacity:0;transform:translateY(14px);transition:all .6s cubic-bezier(.2,.9,.3,1)}
+.reveal.show{opacity:1;transform:none}
+.header.sticky{position:fixed;left:0;right:0;top:10px;background:linear-gradient(90deg, rgba(2,6,23,0.4), rgba(2,6,23,0.35));backdrop-filter: blur(6px);margin:auto;max-width:1200px;padding:12px 28px;border-radius:12px;z-index:60}
+</style>
+</head>
+<body>
+  <div class="container">
+    <header class="header">
+      <div class="brand"><div class="logo">VL</div><div><div style="font-weight:900">VivaLeve</div><div class="small">Saúde, dados e resultados</div></div></div>
+      <nav><a href="index.html">Home</a><a href="treinos.html">Treinos</a><a href="refeicoes.html">Refeições</a><a href="inscreva-se.html">Inscreva-se</a><a class="cta" href="inscreva-se.html">Comece agora</a></nav>
+    </header>
+
+    <section class="hero">
+      <div class="content reveal">
+        <div style="font-weight:800;color:var(--accent);margin-bottom:8px">Lançamento</div>
+        <h1 style="font-size:34px;margin:0 0 8px">Transforme dados em resultados — viva mais leve</h1>
+        <p class="small" style="margin:0 0 12px">Programas com métricas, treinos e alimentação planejada para resultados reais.</p>
+        <a class="btn" href="treinos.html">Ver treinos</a>
+        <a class="btn" style="margin-left:10px;background:linear-gradient(90deg,#ffd27a,#ff8a6b);" href="refeicoes.html">Ver refeições</a>
+
+        <div class="card" style="margin-top:18px">
+          <div class="section-title">Por que VivaLeve?</div>
+          <div class="small">Abordagem baseada em dados, suporte de especialistas e planos práticos para o dia a dia.</div>
+        </div>
+      </div>
+
+      <div class="media card reveal" aria-hidden><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" preserveAspectRatio="xMidYMid slice"><rect width="100%" height="100%" fill="#fffaf8"/><g transform="translate(40,30)"><rect x="60" y="40" width="620" height="380" rx="20" fill="#fff"/><g transform="translate(120,90)"><rect x="0" y="0" width="360" height="220" rx="12" fill="#f6fff9"/><circle cx="300" cy="60" r="28" fill="#9ad5ff"/><rect x="20" y="80" width="200" height="18" rx="8" fill="#dffcf0"/></g></g></svg></div>
+    </section>
+
+    <section class="card reveal">
+      <div class="section-title">Destaques</div>
+      <div class="grid3">
+        <div><strong>Planos adaptativos</strong><div class="small">Ajustes semanais automáticos</div></div>
+        <div><strong>Treinos curtos</strong><div class="small">HIIT, força e mobilidade</div></div>
+        <div><strong>Receitas práticas</strong><div class="small">Fácil execução e balanceado</div></div>
+      </div>
+    </section>
+
+    <section class="card reveal">
+      <div class="section-title">Inscreva-se para receber um plano</div>
+      <p class="small">Acesse a página de inscrição para receber um plano personalizado.</p>
+      <a class="btn" href="inscreva-se.html">Ir para Inscrição</a>
+    </section>
+
+    <footer class="footer reveal">
+      <div><strong>VivaLeve</strong><div class="small">Copyright © 2025 VivaLeve</div></div>
+      <div class="small">Quer ajuda? <a href="inscreva-se.html" style="color:var(--accent)">Inscreva-se</a></div>
+    </footer>
+  </div>
+<script>(function(){
+  const obs = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      if(e.isIntersecting){ e.target.classList.add('show'); obs.unobserve(e.target); }
+    });
+  }, {threshold:0.12});
+  document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
+  const header = document.querySelector('.header');
+  window.addEventListener('scroll', function(){
+    if(window.scrollY > 60) header.classList.add('sticky'); else header.classList.remove('sticky');
+  });
+})();</script>
+</body>
+</html>
